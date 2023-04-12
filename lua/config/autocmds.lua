@@ -18,3 +18,11 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+--vim.api.nvim_exec([[:lua require("persistence").load()]], false)
+
+--autocmd:execute("s")
+--vim.cmd("exe" .. '[[ +lua require("persistence").load() <cr>]]')
