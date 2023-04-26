@@ -25,8 +25,3 @@ require("notify").setup({
   background_colour = "#000000",
 })
 vim.api.nvim_command("au ColorScheme * hi Normal ctermbg=None")
---
---vim.api.nvim_exec([[:lua require("persistence").load()]], false)
-
---autocmd:execute("s")
---vim.cmd("exe" .. '[[ +lua require("persistence").load() <cr>]]')
