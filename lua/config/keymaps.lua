@@ -35,3 +35,11 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>cx", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Create executable" })
 
 vim.keymap.set("n", "<leader>uu", vim.cmd.UndotreeToggle, { desc = "Toggle Undotree" })
+
+-- vim.keymap.set("i", "<Tab>", function()
+--   if vim.fn["codeium#GetStatusString"]() then
+--     return vim.fn["codeium#Accept"]()
+--   else
+--     return vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", false)
+--   end
+-- end, { expr = true })
