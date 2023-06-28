@@ -5,8 +5,6 @@
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
-vim.opt.incsearch = true
-
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
@@ -25,3 +23,6 @@ require("notify").setup({
   background_colour = "#000000",
 })
 vim.api.nvim_command("au ColorScheme * hi Normal ctermbg=None")
+
+vim.opt.ic = false
+vim.opt.wrap = true
