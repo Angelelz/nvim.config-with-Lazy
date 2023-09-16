@@ -168,6 +168,12 @@ return {
       require("lspconfig")[server].setup(server_opts)
     end
 
+    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+    for type, icon in pairs(signs) do
+      local hl = "DiagnosticSign" .. type
+      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+    end
+
     -- get all the servers that are available thourgh mason-lspconfig
     local have_mason, mlsp = pcall(require, "mason-lspconfig")
     local all_mslp_servers = {}

@@ -30,6 +30,35 @@ return {
     },
   },
   config = function()
-    require("nvim-tree").setup({})
+    require("nvim-tree").setup({
+      view = {
+        width = 40,
+      },
+
+      renderer = {
+        icons = {
+          glyphs = {
+            folder = {
+              arrow_closed = "→",
+              arrow_open = "↓",
+            },
+          },
+        },
+      },
+
+      actions = {
+        open_file = {
+          window_picker = {
+            enable = true,
+          },
+        },
+      },
+      filters = {
+        custom = { ".DS_Store" },
+      },
+      git = {
+        ignore = false,
+      },
+    })
   end,
 }
