@@ -11,7 +11,7 @@ return {
       function()
         local api = require("nvim-tree.api")
         api.tree.toggle({
-          path = require("lazyvim.util").get_root(),
+          path = require("lazyvim.util").root(),
         })
       end,
       desc = "Explorer (root dir)",
