@@ -47,7 +47,7 @@ return {
     -- but can be also overridden when specified
     format = {
       formatting_options = nil,
-      timeout_ms = 1000,
+      timeout_ms = 3000,
     },
     -- LSP Server Settings
     ---@type lspconfig.options
@@ -108,6 +108,7 @@ return {
 
     local register_capability = vim.lsp.handlers["client/registerCapability"]
 
+    ---@diagnostic disable-next-line: duplicate-set-field
     vim.lsp.handlers["client/registerCapability"] = function(err, res, ctx)
       local ret = register_capability(err, res, ctx)
       local client_id = ctx.client_id

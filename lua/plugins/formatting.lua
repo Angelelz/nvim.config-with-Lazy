@@ -18,8 +18,9 @@ return {
     vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
     -- Install the conform formatter on VeryLazy
     require("lazyvim.util").on_very_lazy(function()
+      ---@diagnostic disable-next-line: duplicate-set-field
       require("lazyvim.util").format.format = function(opts)
-        return require("conform").format({ bufnr = opts.buf })
+        return require("conform").format({ bufnr = opts.buf, timeout_ms = 3000, async = false, lsp_fallback = true })
       end
     end)
   end,
@@ -38,6 +39,11 @@ return {
       graphql = { "prettier" },
       lua = { "stylua" },
       python = { "black", "isort" },
+    },
+    format_on_save = {
+      lsp_fallback = true,
+      async = false,
+      timeout_ms = 3000,
     },
     -- LazyVim will merge the options you set here with builtin formatters.
     -- You can also define any custom formatters here.
