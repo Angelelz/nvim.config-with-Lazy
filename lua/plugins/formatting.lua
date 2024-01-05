@@ -45,9 +45,9 @@ return {
       dprint = {
         condition = function(ctx)
           local hasConfig = vim.fs.find({ "dprint.json" }, { path = ctx.filename, upward = true })[1]
-          if hasConfig then
-            print("using dprint")
-          end
+          -- if hasConfig then
+          --   print("using dprint")
+          -- end
           return hasConfig
         end,
       },
@@ -67,9 +67,9 @@ return {
             "prettier.config.cjs",
             ".prettierrc.toml",
           }, { path = ctx.filename, upward = true })[1]
-          if hasConfig then
-            print("using prettier")
-          end
+          -- if hasConfig then
+          --   print("using prettier")
+          -- end
           return hasConfig
         end,
       },
