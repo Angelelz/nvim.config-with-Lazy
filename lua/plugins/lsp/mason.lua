@@ -42,6 +42,7 @@ return {
         "prismals",
         "pyright",
         "zls",
+        "rust_analyzer",
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
@@ -57,6 +58,7 @@ return {
         "pylint",
         "prettier",
         "eslint_d",
+        "rust_analyzer",
       },
     })
 

@@ -54,6 +54,9 @@ require("lazy").setup({
       },
     },
   },
+  opts = {
+    colorscheme = "habamax",
+  },
 })
 require("notify").setup({
   background_colour = "#000000",
