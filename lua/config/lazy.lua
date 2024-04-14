@@ -22,6 +22,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.formatting.conform" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     -- import/override with your plugins
+    { import = "plugins.flash" },
     { import = "plugins" },
     { import = "plugins.lsp" },
   },
