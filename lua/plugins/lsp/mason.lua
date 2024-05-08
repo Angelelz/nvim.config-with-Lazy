@@ -59,6 +59,7 @@ return {
         "prettier",
         "eslint_d",
         "rust_analyzer",
+        "sqlfmt",
       },
     })
 

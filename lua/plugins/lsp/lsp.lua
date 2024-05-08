@@ -96,10 +96,10 @@ return {
     Util.format.register(Util.lsp.formatter())
 
     -- deprectaed options
-    if opts.autoformat ~= nil then
-      vim.g.autoformat = opts.autoformat
-      Util.deprecate("nvim-lspconfig.opts.autoformat", "vim.g.autoformat")
-    end
+    -- if opts.autoformat ~= nil then
+    --   vim.g.autoformat = opts.autoformat
+    --   Util.deprecate("nvim-lspconfig.opts.autoformat", "vim.g.autoformat")
+    -- end
 
     -- setup keymaps
     Util.lsp.on_attach(function(client, buffer)
